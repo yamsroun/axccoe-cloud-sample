@@ -7,7 +7,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.3-SNAPSHOT'
 
 java {
 	toolchain {
@@ -15,11 +15,15 @@ java {
 	}
 }
 
+jar {
+    enabled = false
+}
+
 publishing { 
     repositories { 
 	maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/dragon262/cloud-sample")
+            url = uri("https://maven.pkg.github.com/yamsroun/axccoe-cloud-sample")
             credentials {
                 username = System.getenv("MAVEN_USERNAME")
                 password = System.getenv("MAVEN_PASSWORD")
@@ -38,7 +42,7 @@ repositories {
     
 	maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/dragon262/cloud-sample")
+            url = uri("https://maven.pkg.github.com/yamsroun/axccoe-cloud-sample")
             credentials {
                 username = System.getenv("MAVEN_USERNAME")
                 password = System.getenv("MAVEN_PASSWORD")
